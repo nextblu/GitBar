@@ -53,6 +53,7 @@
     }
   },
   "dependencies": {
+    "@octokit/rest": "^18.0.3",
     "axios": "^0.18.0",
     "buefy": "^0.8.20",
     "vue": "^2.5.16",

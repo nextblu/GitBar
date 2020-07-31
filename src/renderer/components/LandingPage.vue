@@ -5,6 +5,7 @@
       <div class="left-side">
         <span class="title">
           Welcome to your new project!
+          <button @click="$router.push({name: 'login-page'})">Login</button>
         </span>
         <system-information></system-information>
       </div>
