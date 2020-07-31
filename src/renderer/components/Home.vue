@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import Navbar from './Home/Navbar'
+    import Navbar from './Home/Bottombar'
 export default {
       name: 'home-page',
       components: {

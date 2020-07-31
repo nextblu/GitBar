@@ -20,9 +20,10 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 563,
+    height: 565,
     useContentSize: false,
-    width: 300
+    width: 340,
+    icon: __dirname + '/icon.png'
     /* transparent: true,
     center: true,
     frame: false */
