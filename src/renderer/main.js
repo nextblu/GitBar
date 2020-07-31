@@ -2,11 +2,12 @@ import Vue from 'vue'
 import axios from 'axios'
 
 import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
 
 import App from './App'
 import router from './router'
 import store from './store'
+
+import 'buefy/dist/buefy.css'
 
 Vue.use(Buefy)
 

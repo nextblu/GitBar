@@ -65,7 +65,7 @@
 
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-primary">Login</button>
+                <button class="button is-primary" @click="$router.push({name:'home-page'})">Login</button>
             </footer>
         </div>
     </div>
