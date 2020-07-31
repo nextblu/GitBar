@@ -1,47 +1,100 @@
 <template>
-    <section class="login-page">
-        <b-field label="Name">
-            <b-input value="Kevin Garvey"></b-input>
-        </b-field>
+    <div class="page">
 
-        <b-field label="Email"
-                 type="is-danger"
-                 message="This email is invalid">
-            <b-input type="email"
-                     value="john@"
-                     maxlength="30">
-            </b-input>
-        </b-field>
+        <section class="loading" v-if="isLoading">
+            <b-skeleton width="20%" ></b-skeleton>
 
-        <b-field label="Username"
-                 type="is-success"
-                 message="This username is available">
-            <b-input value="johnsilver" maxlength="30"></b-input>
-        </b-field>
+            <b-skeleton width="40%" ></b-skeleton>
 
-        <b-field label="Password"
-                 type="is-warning"
-                 :message="['Password is too short', 'Password must have at least 8 characters']">
-            <b-input value="123" type="password" maxlength="30"></b-input>
-        </b-field>
+            <b-skeleton width="80%" ></b-skeleton>
 
-        <b-field label="Subject">
-            <b-select placeholder="Select a subject">
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-            </b-select>
-        </b-field>
-    </section>
+            <b-skeleton></b-skeleton>
+            <b-skeleton width="32%" ></b-skeleton>
+
+            <b-skeleton width="44%" ></b-skeleton>
+
+            <b-skeleton width="98%" ></b-skeleton>
+
+            <b-skeleton></b-skeleton>
+            <b-skeleton width="14%" ></b-skeleton>
+
+            <b-skeleton width="77%" ></b-skeleton>
+
+            <b-skeleton width="7%" ></b-skeleton>
+
+            <b-skeleton></b-skeleton>
+            <b-skeleton width="20%" ></b-skeleton>
+
+            <b-skeleton width="40%" ></b-skeleton>
+
+            <b-skeleton width="70%" ></b-skeleton>
+
+            <b-skeleton></b-skeleton>
+            <b-skeleton width="20%" ></b-skeleton>
+
+            <b-skeleton width="25%" ></b-skeleton>
+
+            <b-skeleton width="80%" ></b-skeleton>
+
+            <b-skeleton></b-skeleton>
+
+        </section>
+        <div class="modal-card" style="width: auto" v-else>
+            <header class="modal-card-head">
+                <p class="modal-card-title">Login</p>
+            </header>
+            <section class="modal-card-body">
+                <b-field label="Email">
+                    <b-input
+                            type="email"
+                            :value="email"
+                            placeholder="Your email"
+                            required>
+                    </b-input>
+                </b-field>
+
+                <b-field label="Password">
+                    <b-input
+                            type="password"
+                            :value="password"
+                            password-reveal
+                            placeholder="Your password"
+                            required>
+                    </b-input>
+                </b-field>
+
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-primary">Login</button>
+            </footer>
+        </div>
+    </div>
 </template>
 
 <script>
     export default {
-      name: 'Login'
+      name: 'Login',
+      data () {
+        return {
+          isLoading: false,
+          email: '',
+          password: ''
+        }
+      }
     }
 </script>
 
 <style scoped>
-    .login-page {
+    .loading {
         padding: 20px;
     }
+    .login-page {
+        padding: 20px;
+        min-height: 100vh;
+        min-width: 100%;
+        display: block;
+        position: relative;
+
+    }
+
 </style>
