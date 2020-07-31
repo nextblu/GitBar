@@ -22,7 +22,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 565,
     useContentSize: false,
-    width: 340,
+    width: 770,
     icon: __dirname + '/icon.png'
     /* transparent: true,
     center: true,
